@@ -10,7 +10,7 @@
 body {
   font-family: 'Sirin Stencil';
   overflow-x: hidden;
-  background: $body;
+  //background: $body;
 }
 
 h1,
@@ -26,4 +26,10 @@ h6 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }

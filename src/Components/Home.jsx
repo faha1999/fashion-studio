@@ -1,5 +1,10 @@
 import React from 'react';
+import { CoverVideo } from '../partials/CoverVideo';
 
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <section>
+      <CoverVideo />
+    </section>
+  );
 };
