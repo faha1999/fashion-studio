@@ -11,12 +11,31 @@ const item = {
   },
 };
 
+const container = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+
+    transition: {
+      delayChildren: 5, // 2
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 export const CoverVideo = () => {
   return (
     <section className="VideoContainer">
       <div className="DarkOverlay"></div>
 
-      <div className="Title">
+      <motion.div
+        className="Title"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         <div>
           <motion.h1
             variants={item}
@@ -52,15 +71,15 @@ export const CoverVideo = () => {
           </motion.h1>
         </div>
 
-        <h2
+        <motion.h2
           variants={item}
           data-scroll
           data-scroll-delay="0.04"
           data-scroll-speed="2"
         >
           Inspire. Create. Belive
-        </h2>
-      </div>
+        </motion.h2>
+      </motion.div>
       <video src={Video} type="video/mp4" autoPlay muted loop />
     </section>
   );
