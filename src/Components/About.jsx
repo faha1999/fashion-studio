@@ -6,9 +6,22 @@ import img3 from '../assets/Images/3.webp';
 
 export const About = () => {
   return (
-    <section className="AboutSection">
-      <h1 className="title">About us</h1>
-      <div className="left">
+    <section className="AboutSection" id="fixed-target">
+      <h1
+        className="title"
+        data-scroll
+        data-scroll-speed="-2"
+        data-scroll-direction="horizontal"
+      >
+        About us
+      </h1>
+
+      <div
+        className="left"
+        data-scroll
+        data-scroll-sticky
+        data-scroll-target="#fixed-target"
+      >
         We're fashion studio based in california. We create unique designs that
         will blow your mind. We also design unique jewellary pieces. Fashion is
         an ART that can not be grasped by everyone.

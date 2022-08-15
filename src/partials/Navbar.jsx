@@ -63,7 +63,7 @@ export const Navbar = () => {
         </motion.li>
         <motion.li
           className="MenuItem"
-          onClick={() => handleScroll('#about')}
+          onClick={() => handleScroll('.AboutSection')}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, Y: 0 }}
         >
