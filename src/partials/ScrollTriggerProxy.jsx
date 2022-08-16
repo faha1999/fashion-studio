@@ -5,7 +5,6 @@ import gsap from 'gsap';
 
 export const ScrollTriggerProxy = () => {
   const { scroll } = useLocomotiveScroll();
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
