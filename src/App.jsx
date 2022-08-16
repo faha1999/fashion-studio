@@ -6,6 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 import { About } from './Components/About';
 import { Shop } from './Components/Shop';
 import { ScrollTriggerProxy } from './partials/ScrollTriggerProxy';
+import { Banner } from './Components/Banner';
 
 function App() {
   const containerRef = useRef(null);
@@ -31,6 +32,7 @@ function App() {
           <Home />
           <About />
           <Shop />
+          <Banner />
         </main>
       </AnimatePresence>
     </LocomotiveScrollProvider>
