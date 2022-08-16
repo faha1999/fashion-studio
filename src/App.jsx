@@ -7,6 +7,7 @@ import { About } from './Components/About';
 import { Shop } from './Components/Shop';
 import { ScrollTriggerProxy } from './partials/ScrollTriggerProxy';
 import { Banner } from './Components/Banner';
+import { NewArrival } from './Components/NewArrival';
 
 function App() {
   const containerRef = useRef(null);
@@ -33,6 +34,7 @@ function App() {
           <About />
           <Shop />
           <Banner />
+          <NewArrival />
         </main>
       </AnimatePresence>
     </LocomotiveScrollProvider>

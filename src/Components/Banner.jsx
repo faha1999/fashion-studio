@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Banner = () => {
   return (
-    <div className="BannerSection">
+    <section className="BannerSection">
       <div className="container" id="up">
         <h1 className="BannerComponent">
           <span
@@ -59,6 +59,6 @@ export const Banner = () => {
           </span>
         </h1>
       </div>
-    </div>
+    </section>
   );
 };
