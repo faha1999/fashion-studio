@@ -5,6 +5,7 @@ import { Home } from './Components/Home';
 import { AnimatePresence } from 'framer-motion';
 import { About } from './Components/About';
 import { Shop } from './Components/Shop';
+import { ScrollTriggerProxy } from './partials/ScrollTriggerProxy';
 
 function App() {
   const containerRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
       }
       containerRef={containerRef}
     >
+      <ScrollTriggerProxy />
       <AnimatePresence>
         <main data-scroll-container ref={containerRef}>
           <Home />
