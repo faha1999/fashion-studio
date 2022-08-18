@@ -9,6 +9,7 @@ import { ScrollTriggerProxy } from './partials/ScrollTriggerProxy';
 import { Banner } from './Components/Banner';
 import { NewArrival } from './Components/NewArrival';
 import { Footer } from './Components/Footer';
+import { Loader } from './Components/Loader';
 
 function App() {
   const containerRef = useRef(null);
@@ -28,6 +29,7 @@ function App() {
       }
       containerRef={containerRef}
     >
+      <Loader />
       <ScrollTriggerProxy />
       <AnimatePresence>
         <main className="App" data-scroll-container ref={containerRef}>
