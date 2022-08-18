@@ -5,7 +5,7 @@ import { Navbar } from '../partials/Navbar';
 
 export const Home = () => {
   return (
-    <section>
+    <section className="home">
       <CoverVideo />
       <Logo />
       <Navbar />
