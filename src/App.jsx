@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { Home } from './Components/Home';
@@ -13,6 +13,14 @@ import { Loader } from './Components/Loader';
 
 function App() {
   const containerRef = useRef(null);
+
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 3000);
+  }, []);
 
   return (
     <LocomotiveScrollProvider
@@ -29,7 +37,7 @@ function App() {
       }
       containerRef={containerRef}
     >
-      <Loader />
+      <AnimatePresence>{loaded ? null : <Loader />}</AnimatePresence>
       <ScrollTriggerProxy />
       <AnimatePresence>
         <main className="App" data-scroll-container ref={containerRef}>

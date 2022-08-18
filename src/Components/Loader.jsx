@@ -34,7 +34,20 @@ const pathVariants = {
 
 export const Loader = () => {
   return (
-    <div className="LoaderContainer">
+    <motion.div
+      className="LoaderContainer"
+      initial={{
+        y: 0,
+        opacity: 1,
+      }}
+      exit={{
+        y: '100%',
+        opacity: 0,
+      }}
+      transition={{
+        duration: 2,
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         enableBackground="new 0 0 24 24"
@@ -61,6 +74,6 @@ export const Loader = () => {
       >
         Wibe Studio
       </motion.span>
-    </div>
+    </motion.div>
   );
 };
